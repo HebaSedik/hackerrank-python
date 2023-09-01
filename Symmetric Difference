@@ -1,0 +1,8 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+M = int(input())
+set_a = set(map(int, input().split()))
+N = int(input())
+set_b = set(map(int, input().split()))
+symmetric_diff = set_a.symmetric_difference(set_b)
+for num in sorted(symmetric_diff):
+    print(num)
