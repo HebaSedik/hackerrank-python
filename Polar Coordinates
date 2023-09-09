@@ -1,0 +1,7 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import cmath
+complex_number = complex(input())
+polar_coordinates = cmath.polar(complex_number)
+r, theta = polar_coordinates
+print(round(r, 3))  
+print(round(theta, 3))  
