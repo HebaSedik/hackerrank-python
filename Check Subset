@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def is_subset(set1, set2):
+    return set1.issubset(set2)
+# Read the number of test cases
+t = int(input())
+for _ in range(t):
+    # Read the lengths of the two sets
+    _ = input()  # Ignore this input
+    set1 = set(map(int, input().split()))
+    _ = input()  # Ignore this input
+    set2 = set(map(int, input().split()))
+
+    result = is_subset(set1, set2)
+    print(result)
