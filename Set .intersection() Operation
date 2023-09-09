@@ -1,0 +1,7 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(input())
+english_subs = set(map(int, input().split()))
+m = int(input())
+french_subs = set(map(int, input().split()))
+common_students = len(english_subs.intersection(french_subs))
+print(common_students)
