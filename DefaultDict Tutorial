@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import defaultdict
+n, m = map(int, input().split())
+group_a = defaultdict(list)
+for i in range(1, n + 1):
+    element = input()
+    group_a[element].append(i)
+for _ in range(m):
+    element = input()
+    positions = group_a[element]
+    if positions:
+        print(*positions)
+    else:
+        print(-1)
