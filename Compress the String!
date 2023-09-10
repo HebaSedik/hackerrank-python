@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def compress_string(s):
+    compressed = []  
+    count = 1  
+    for i in range(1, len(s)):
+        if s[i] == s[i - 1]:
+            count += 1
+        else:
+            compressed.append(f"({count}, {s[i - 1]})")
+            count = 1
+    compressed.append(f"({count}, {s[-1]})")
+    compressed_string = ' '.join(compressed)
+    return compressed_string
+input_string = input()
+compressed_result = compress_string(input_string)
+print(compressed_result)
