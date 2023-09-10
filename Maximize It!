@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import product
+k, m = map(int, input().split())
+lists = []
+for _ in range(k):
+    lst = list(map(int, input().split()))
+    lists.append(lst[1:])
+combinations = list(product(*lists))
+max_sum = -1 
+for combo in combinations:
+    current_sum = sum(x ** 2 for x in combo) % m
+    max_sum = max(max_sum, current_sum)
+print(max_sum)
