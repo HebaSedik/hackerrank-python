@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations
+n = int(input()) 
+letters = input().split() 
+k = int(input()) 
+indices = list(range(1, n + 1)) 
+a_indices = [index for index, letter in zip(indices, letters) if letter == 'a']
+count = 0
+for tup in combinations(indices, k):
+    if any(index in a_indices for index in tup):
+        count += 1
+probability = count / len(list(combinations(indices, k)))
+print(f"{probability:.4f}")
