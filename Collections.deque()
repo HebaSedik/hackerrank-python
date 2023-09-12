@@ -1,0 +1,18 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import deque
+n = int(input())
+my_deque = deque()
+for _ in range(n):
+    operation = input().split()
+    method = operation[0]
+    if method == "append":
+        value = int(operation[1])
+        my_deque.append(value)
+    elif method == "appendleft":
+        value = int(operation[1])
+        my_deque.appendleft(value)
+    elif method == "pop":
+        my_deque.pop()
+    elif method == "popleft":
+        my_deque.popleft()
+print(*my_deque)
