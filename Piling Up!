@@ -1,0 +1,29 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import deque
+def can_construct_piles(t, test_cases):
+    results = []
+    for _ in range(t):
+        n, blocks = test_cases[_]
+        blocks = deque(blocks)
+        prev_block = float('inf')
+        while blocks:
+            if blocks[0] >= blocks[-1] and blocks[0] <= prev_block:
+                prev_block = blocks.popleft()
+            elif blocks[-1] >= blocks[0] and blocks[-1] <= prev_block:
+                prev_block = blocks.pop()
+            else:
+                results.append("No")
+                break
+        else:
+            results.append("Yes")
+
+    return results
+t = int(input().strip())
+test_cases = []
+for _ in range(t):
+    n = int(input().strip())
+    blocks = list(map(int, input().strip().split()))
+    test_cases.append((n, blocks))
+results = can_construct_piles(t, test_cases)
+for result in results:
+    print(result)
