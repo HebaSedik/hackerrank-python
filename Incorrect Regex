@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+n = int(input())
+for _ in range(n):
+    regex_pattern = input()
+    try:
+        re.compile(regex_pattern)
+        print("True")
+    except re.error:
+        print("False")
