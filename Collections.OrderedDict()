@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import OrderedDict
+item_quantities = OrderedDict()
+n = int(input())
+for _ in range(n):
+    item_info = input().split()
+    item_name, item_price = ' '.join(item_info[:-1]), int(item_info[-1])
+    if item_name in item_quantities:
+        item_quantities[item_name] += item_price
+    else:
+        item_quantities[item_name] = item_price
+for item_name, total_quantity in item_quantities.items():
+    print(item_name, total_quantity)
