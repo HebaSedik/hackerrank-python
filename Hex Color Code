@@ -1,0 +1,6 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+x = re.compile(r"#[\dA-F]{3,6}(?=[;,)])",re.I)
+for _ in range(int(input())):
+    for y in x.findall(input()):
+        print(y)
