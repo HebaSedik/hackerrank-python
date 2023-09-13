@@ -1,0 +1,4 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n,l = int(input()),input().split()
+p = [all(int(i)>=0 for i in l),any(i == i[::-1] for i in l) ]
+print(all(p))
