@@ -1,0 +1,5 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import math
+x=float(input())
+y=float(input())
+print(str(round(math.degrees(math.atan(x/y))))+chr(176))
