@@ -1,0 +1,6 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+x = input()
+if "print" in x :
+    eval(x)
+else :
+    print(eval(x))
