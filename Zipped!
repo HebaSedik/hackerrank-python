@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n,x=map(int,input().split())
+m=[]
+for i in range(x):
+    c=list(map(float,input().split()))
+    m=m+[c]
+y=zip(*m)
+for i in y:
+    print(sum(i)/len(i))
